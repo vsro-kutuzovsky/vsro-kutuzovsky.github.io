@@ -249,9 +249,9 @@ button.chip{cursor:pointer;font-family:inherit;line-height:1.4}
 .dept-btn:hover{background:var(--brass-soft);border-color:var(--brass)}
 .dept-btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 /* layout with left menu */
-.brand .wrap{max-width:1560px}
-.layout{display:grid;grid-template-columns:clamp(236px,21vw,300px) minmax(0,1fr);max-width:1560px;margin:0 auto;align-items:start}
-.maincol .wrap{max-width:1240px;padding-inline:clamp(16px,2.4vw,36px)}
+.brand .wrap{max-width:none;padding-inline:clamp(16px,2.2vw,40px)}
+.layout{display:grid;grid-template-columns:clamp(236px,17vw,340px) minmax(0,1fr);width:100%;align-items:start}
+.maincol .wrap{max-width:none;padding-inline:clamp(16px,2.2vw,44px)}
 .maincol{min-width:0}
 .side{position:sticky;top:0;height:100vh;overflow-y:auto;overscroll-behavior:contain;background:var(--surface);border-right:1px solid var(--line);padding:12px 10px 60px;scrollbar-width:thin}
 .side-it{display:flex;gap:9px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-radius:8px;padding:7px 10px;font:inherit;font-size:14px;color:var(--ink-2);cursor:pointer;line-height:1.3}
@@ -302,7 +302,7 @@ button.chip{cursor:pointer;font-family:inherit;line-height:1.4}
 .rail{display:none}
 .b-sub{scroll-margin-top:140px}
 @media (min-width:1280px){
-  .sec-layout.has-rail{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;align-items:start}
+  .sec-layout.has-rail{display:grid;grid-template-columns:minmax(0,1fr) clamp(200px,14vw,290px);gap:clamp(20px,2vw,36px);align-items:start}
   .rail{display:block;position:sticky;top:96px}
   .rail-in{border-left:2px solid var(--line);padding:4px 0 4px 14px;display:grid;gap:2px}
   .rail-h{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
@@ -310,7 +310,9 @@ button.chip{cursor:pointer;font-family:inherit;line-height:1.4}
   .rail-a:hover{color:var(--navy-ink)}
 }
 @media (min-width:820px){
-  body{font-size:16px}
+  body{font-size:clamp(15.5px,0.3vw + 12px,18px)}
+  .b-p{max-width:120ch}
+  .side-it,.toc-link{font-size:clamp(14px,0.2vw + 11.5px,15.5px)}
   .hero{padding-top:28px}
   .hero h1{font-size:clamp(28px,2.6vw,38px)}
   .sec-head{padding:15px 22px}
